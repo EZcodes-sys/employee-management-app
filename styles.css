@@ -70,3 +70,40 @@ th {
     background-color: #333;
     color: white;
 }
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: linear-gradient(180deg, #1e2a38, #0f1720);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar .profile {
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: #cfd8dc;
+    padding: 10px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background: #1abc9c;
+    color: white;
+}
