@@ -38,3 +38,38 @@ document.addEventListener("DOMContentLoaded", function () {
             form.reset();
         });
     }
+
+    // ===== VIEW EMPLOYEES =====
+    const table = document.getElementById("employeeTable");
+
+    if (table) {
+        let employees = JSON.parse(localStorage.getItem("employees")) || [];
+
+        table.innerHTML = "";
+
+        employees.forEach((emp) => {
+            table.innerHTML += `
+                <tr>
+                    <td>${emp.name}</td>
+                    <td>${emp.email}</td>
+                    <td>${emp.phone}</td>
+                    <td>${emp.department}</td>
+                    <td>
+                        <button onclick="showDetails()">Details</button>
+                        <button onclick="editContact()">Edit</button>
+                        <button onclick="deleteContact()">Delete</button>
+                    </td>
+                </tr>
+            `;
+        });
+    }
+
+    // ===== DASHBOARD COUNT =====
+    const countElement = document.getElementById("contactCount");
+
+    if (countElement) {
+        let employees = JSON.parse(localStorage.getItem("employees")) || [];
+        countElement.textContent = employees.length;
+    }
+
+});
