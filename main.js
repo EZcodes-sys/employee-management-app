@@ -1,3 +1,4 @@
+// ===== PLACEHOLDER BUTTONS =====
 function showDetails() {
     alert("Employee full details will appear here.");
 }
@@ -10,8 +11,22 @@ function deleteContact() {
     confirm("Are you sure you want to delete?");
 }
 
+
 // ===== MAIN LOGIC =====
 document.addEventListener("DOMContentLoaded", function () {
+
+    // ===== DEFAULT SAMPLE DATA (ALWAYS LOAD FOR DEMO) =====
+    const sampleEmployees = [
+        { name: "John Mwangi", email: "john@gmail.com", phone: "0712345678", department: "IT" },
+        { name: "Mary Wanjiku", email: "mary@gmail.com", phone: "0723456789", department: "HR" },
+        { name: "David Otieno", email: "david@gmail.com", phone: "0734567890", department: "Finance" },
+        { name: "Grace Achieng", email: "grace@gmail.com", phone: "0745678901", department: "Marketing" },
+        { name: "Peter Kamau", email: "peter@gmail.com", phone: "0756789012", department: "Sales" }
+    ];
+
+    // Always reset to default data (for lecturer view)
+    localStorage.setItem("employees", JSON.stringify(sampleEmployees));
+
 
     // ===== ADD EMPLOYEE =====
     const form = document.getElementById("employeeForm");
@@ -39,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+
     // ===== VIEW EMPLOYEES =====
     const table = document.getElementById("employeeTable");
 
@@ -63,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
         });
     }
+
 
     // ===== DASHBOARD COUNT =====
     const countElement = document.getElementById("contactCount");
