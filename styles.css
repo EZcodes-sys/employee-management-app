@@ -128,3 +128,22 @@ th {
     color: white;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+/* Colorful gradients */
+.blue {
+    background: linear-gradient(45deg, #36d1dc, #5b86e5);
+}
+
+.green {
+    background: linear-gradient(45deg, #11998e, #38ef7d);
+}
+
+/* Card text */
+.card h2 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.card p {
+    margin-top: 10px;
+}
