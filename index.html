@@ -19,7 +19,7 @@
             <small><span class="status"></span> Online</small>
         </div>
 
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="new-contact.html">New Contact</a>
         <a href="view-contacts.html">View All Contacts</a>
 
@@ -33,7 +33,6 @@
             <h1>Employee Management System</h1>
 
             <p>Welcome to the Employee Management Application.</p>
-
             <p>This system allows you to add, view and manage employee contact information.</p>
 
             <!-- Dashboard Cards -->
@@ -47,7 +46,7 @@
 
                 <div class="card green">
                     <img src="images/contacts.png" class="card-icon">
-                    <h2>50</h2>
+                    <h2 id="contactCount">0</h2>
                     <p>No. of Contacts</p>
                 </div>
 
@@ -57,5 +56,6 @@
 
     </div>
 
+    <script src="main.js"></script>
 </body>
 </html>
