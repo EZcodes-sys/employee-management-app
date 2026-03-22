@@ -221,3 +221,35 @@ td button:nth-child(2) {
 td button:nth-child(3) {
     background: #e74c3c; /* red */
 }
+
+/* ===== FORM IMPROVEMENT ===== */
+form input {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #1abc9c;
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.sidebar a {
+    transition: 0.3s;
+}
+
+/* ===== TABLE IMPROVEMENT ===== */
+table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+tr:hover {
+    background: #f1f5ff;
+}
