@@ -181,3 +181,20 @@ th {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
+
+.sidebar a.active {
+    background: #1abc9c;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+}
+
+.container {
+    max-width: 900px;
+}
