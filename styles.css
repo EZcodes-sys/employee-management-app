@@ -198,3 +198,26 @@ p {
 .container {
     max-width: 900px;
 }
+
+/* ===== BETTER BUTTONS ===== */
+button {
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Action buttons (Details, Edit, Delete) */
+td button:nth-child(1) {
+    background: #6c5ce7; /* purple */
+}
+
+td button:nth-child(2) {
+    background: #f39c12; /* orange */
+}
+
+td button:nth-child(3) {
+    background: #e74c3c; /* red */
+}
