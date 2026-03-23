@@ -99,4 +99,31 @@ document.addEventListener("DOMContentLoaded", function () {
         countElement.textContent = employees.length;
     }
 
+    // ===== DASHBOARD EXTRA =====
+const deptCount = document.getElementById("deptCount");
+const activityList = document.getElementById("activityList");
+
+let employees = JSON.parse(localStorage.getItem("employees")) || [];
+
+// Department count
+if (deptCount) {
+    let departments = new Set(employees.map(emp => emp.department));
+    deptCount.textContent = departments.size;
+}
+
+// Recent activity
+if (activityList) {
+    activityList.innerHTML = "";
+
+    if (employees.length === 0) {
+        activityList.innerHTML = "<li>No recent activity</li>";
+    } else {
+        let last = employees[employees.length - 1];
+
+        activityList.innerHTML += `<li>✔ Last added: ${last.name}</li>`;
+        activityList.innerHTML += `<li>📊 Total employees: ${employees.length}</li>`;
+        activityList.innerHTML += `<li>🏢 Departments: ${new Set(employees.map(e => e.department)).size}</li>`;
+    }
+}
+
 });
