@@ -269,3 +269,29 @@ tr:hover {
         transform: translateY(0);
     }
 }
+
+/* ===== QUICK ACTIONS ===== */
+.quick-actions {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.quick-actions button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(45deg, #007BFF, #00c6ff);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quick-actions button:hover {
+    transform: scale(1.05);
+}
+
+/* Purple card */
+.purple {
+    background: linear-gradient(45deg, #8e44ad, #c39bd3);
+}
