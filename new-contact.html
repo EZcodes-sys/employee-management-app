@@ -1,52 +1,78 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Contact</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h2>EMS</h2>
-        <div class="profile">
-            <img src="images/profile.jpg" alt="Profile" class="profile-pic">
-            <p><strong>Employee</strong></p>
-            <small><span class="status"></span> Online</small>
-        </div>
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>EMS</h2>
 
-        <a href="index.html">Home</a>
-        <a href="new-contact.html" class="active">New Contact</a>
-        <a href="view-contacts.html">View All Contacts</a>
+    <div class="profile">
+        <img src="images/profile.jpg" alt="Profile" class="profile-pic">
+        <p><strong>Employee</strong></p>
+        <small><span class="status"></span> Online</small>
     </div>
 
-    <!-- Main content -->
-    <div class="main">
-        <div class="container">
-            <h2>Add New Employee</h2>
-            <form id="employeeForm">
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="new-contact.html" class="active">➕ New Contact</a>
+        <a href="view-contacts.html">📋 View Contacts</a>
+    </nav>
+</div>
+
+<!-- Main -->
+<div class="main">
+    <div class="container">
+
+        <h1>Add New Employee</h1>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <button onclick="location.href='new-contact.html'">➕ Add Employee</button>
+            <button onclick="location.href='view-contacts.html'">📋 View Employees</button>
+        </div>
+
+        <!-- FORM -->
+        <form id="employeeForm">
+
+            <div class="form-group">
                 <label>Full Name</label>
                 <input type="text" id="name" placeholder="Enter full name" required>
+            </div>
 
+            <div class="form-group">
                 <label>Email Address</label>
                 <input type="email" id="email" placeholder="Enter email" required>
+            </div>
 
+            <div class="form-group">
                 <label>Phone Number</label>
                 <input type="text" id="phone" placeholder="Enter phone number">
+            </div>
 
+            <div class="form-group">
                 <label>Department</label>
                 <input type="text" id="department" placeholder="Enter department">
+            </div>
 
+            <div class="form-group">
                 <label>Position</label>
                 <input type="text" id="position" placeholder="Enter position">
+            </div>
 
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+            <button type="submit" class="btn">Add Employee</button>
+
+        </form>
+
     </div>
+</div>
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

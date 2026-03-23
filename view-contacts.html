@@ -1,33 +1,41 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>View Contacts</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h2>EMS</h2>
-        <div class="profile">
-            <img src="images/profile.jpg" alt="Profile" class="profile-pic">
-            <p><strong>Employee</strong></p>
-            <small><span class="status"></span> Online</small>
-        </div>
+<div class="sidebar">
+    <h2>EMS</h2>
 
-        <a href="index.html">Home</a>
-        <a href="new-contact.html">New Contact</a>
-        <a href="view-contacts.html" class="active">View All Contacts</a>
+    <div class="profile">
+        <img src="images/profile.jpg" class="profile-pic">
+        <p><strong>Employee</strong></p>
+        <small><span class="status"></span> Online</small>
     </div>
 
-    <!-- Main content -->
-    <div class="main">
-        <div class="container">
-            <h2>Employee Contacts</h2>
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="new-contact.html">➕ New Contact</a>
+        <a href="view-contacts.html" class="active">📋 View Contacts</a>
+    </nav>
+</div>
 
-            <table>
+<div class="main">
+    <div class="container">
+
+        <h1>Employee Contacts</h1>
+
+        <div class="quick-actions">
+            <button onclick="location.href='new-contact.html'">➕ Add Employee</button>
+            <button onclick="location.href='view-contacts.html'">📋 View Employees</button>
+        </div>
+
+        <table>
+            <thead>
                 <tr>
                     <th>Name</th>
                     <th>Email</th>
@@ -35,11 +43,16 @@
                     <th>Department</th>
                     <th>Actions</th>
                 </tr>
-                <tbody id="employeeTable"></tbody>
-            </table>
-        </div>
-    </div>
+            </thead>
 
-    <script src="main.js"></script>
+            <tbody id="employeeTable"></tbody>
+        </table>
+
+        <p id="emptyMessage">No contacts available.</p>
+
+    </div>
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>
