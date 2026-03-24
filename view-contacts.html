@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>View Contacts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -18,37 +19,50 @@
     </div>
 
     <nav>
-        <a href="index.html">🏠 Home</a>
+        <a href="index.html" class="active">🏠 Home</a>
         <a href="new-contact.html">➕ New Contact</a>
-        <a href="view-contacts.html" class="active">📋 View Contacts</a>
+        <a href="view-contacts.html">📋 View Contacts</a>
     </nav>
+
+    <!-- DARK MODE BUTTON -->
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
 </div>
 
 <div class="main">
     <div class="container">
 
-        <h1>Employee Contacts</h1>
+        <h1>Employee Management System</h1>
+        <p>Welcome to the Employee Management Application.</p>
+        <p>This system allows you to add, view and manage employee contact information.</p>
 
         <div class="quick-actions">
             <button onclick="location.href='new-contact.html'">➕ Add Employee</button>
             <button onclick="location.href='view-contacts.html'">📋 View Employees</button>
         </div>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Department</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
+        <div class="cards">
+            <div class="card blue">
+                <h2>5</h2>
+                <p>No. of Positions</p>
+            </div>
 
-            <tbody id="employeeTable"></tbody>
-        </table>
+            <div class="card green">
+                <h2 id="contactCount">0</h2>
+                <p>No. of Contacts</p>
+            </div>
 
-        <p id="emptyMessage">No contacts available.</p>
+            <div class="card purple">
+                <h2 id="deptCount">0</h2>
+                <p>No. of Departments</p>
+            </div>
+        </div>
+
+        <div class="recent">
+            <h2>Recent Activity</h2>
+            <ul id="activityList">
+                <li>No recent activity</li>
+            </ul>
+        </div>
 
     </div>
 </div>
