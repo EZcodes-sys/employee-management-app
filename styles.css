@@ -352,3 +352,20 @@ tr:hover {
     color: white;
     cursor: pointer;
 }
+
+/* ===== SEARCH BAR ===== */
+#search {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+#search:focus {
+    outline: none;
+    border-color: #1abc9c;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
