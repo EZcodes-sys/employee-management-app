@@ -145,3 +145,18 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.add("dark-mode");
     }
 });
+
+// ===== SEARCH FUNCTION =====
+const searchInput = document.getElementById("search");
+
+if (searchInput) {
+    searchInput.addEventListener("keyup", function () {
+        let filter = searchInput.value.toLowerCase();
+        let rows = document.querySelectorAll("#employeeTable tr");
+
+        rows.forEach(row => {
+            let text = row.textContent.toLowerCase();
+            row.style.display = text.includes(filter) ? "" : "none";
+        });
+    });
+}
