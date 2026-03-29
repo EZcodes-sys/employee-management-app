@@ -39,7 +39,15 @@ This is because localStorage is specific to each user’s browser.
 ---
 
 ## 📷 Screenshots
-(Add screenshots here if required)
+
+### Dashboard
+![Dashboard](images/Dashboard.png)
+
+### Add Employee
+![Add Employee](images/New-contacts.png)
+
+### View Contacts
+![View Contacts](images/View-contacts.png)
 
 ---
 
